@@ -61,6 +61,7 @@ module "ec2_instance" {
   subnet_id                   = module.vpc.public_subnets[0]
   vpc_security_group_ids      = [aws_security_group.ssh_access.id]
   associate_public_ip_address = true
+  create_before_destroy       = false
 
   tags = {
     Name = "devopsforu-ec2"
