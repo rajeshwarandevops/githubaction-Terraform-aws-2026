@@ -27,7 +27,12 @@ jobs:
       run: terraform validate
 
     - name: Terraform Format Check
-      run: terraform fmt -check
+      run: |
+        echo "Checking Terraform formatting..."
+        if ! terraform fmt -check -diff; then
+          echo "Terraform files are not formatted properly. Please run 'terraform fmt' locally and commit the changes."
+          exit 1
+        fi
 
     - name: Terraform Plan
       run: terraform plan -out=tfplan.out
