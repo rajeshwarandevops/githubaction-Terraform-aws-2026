@@ -30,6 +30,8 @@ jobs:
 
     - name: Initialize Terraform
       run: terraform init
+      working-directory: project-cicd
 
     - name: Destroy Terraform infrastructure
       run: terraform destroy -auto-approve
+      working-directory: project-cicd
