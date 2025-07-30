@@ -6,8 +6,7 @@
 # Pem key -Region specific
 # ami id -Region specific
 
-github-action
-
+gitb-action
 # githun account & new repo
 # Add accesskey & secret key in github
 # slack api key & slack webhook url for notification
