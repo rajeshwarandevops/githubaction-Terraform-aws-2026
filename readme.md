@@ -5,7 +5,6 @@
 # admin role
 # Pem key -Region specific
 # ami id -Region specific
-
 github-action
 
 # githun account & new repo
