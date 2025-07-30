@@ -7,7 +7,7 @@
 # ami id -Region specific
 github-action
 
-# githun account & new repo
+# github account & new repo
 # Add accesskey & secret key in github
 # slack api key & slack webhook url for notification
  
