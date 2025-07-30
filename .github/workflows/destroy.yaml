@@ -30,8 +30,12 @@ jobs:
 
     - name: Initialize Terraform
       run: terraform init
-      working-directory: project-cicd
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
     - name: Destroy Terraform infrastructure
       run: terraform destroy -auto-approve
-      working-directory: project-cicd
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
